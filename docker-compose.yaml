@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  jupyter:
+    container_name: jupyter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    command: "jupyterhub --config=jupyterhub_config.py"
