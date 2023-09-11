@@ -1,0 +1,17 @@
+{
+    "argv": [
+        "docker",
+        "run",
+        "--network=host",
+        "-v",
+        "{connection_file}:/connection-spec",
+        "python_37_kernel",
+        "python",
+        "-m",
+        "ipykernel_launcher",
+        "-f",
+        "/connection-spec"
+    ],
+    "display_name": "python_37_kernel",
+    "language": "python"
+}
