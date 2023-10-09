@@ -1,14 +1,29 @@
 version: '3.9'
 
+networks:
+  jupyterhub_network:
+    driver: bridge
+
+
 services:
   jupyter:
     user: root
     container_name: jupyter
+    hostname: jupyterhub
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - jupyterhub_network
+    environment:
+      DOCKER_NETWORK_NAME: jupyterhub_network
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
     ports:
       - "8000:8000"
     command: "jupyterhub --config=jupyterhub_config.py"

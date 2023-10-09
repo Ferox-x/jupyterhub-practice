@@ -1,4 +1,4 @@
-FROM python:3.11.3-slim-buster
+FROM python:3.7-slim-buster
 
 RUN pip install --upgrade pip ipython ipykernel
 CMD python -m ipykernel_launcher -f $DOCKERNEL_CONNECTION_FILE

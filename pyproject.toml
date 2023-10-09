@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "jupyterhub-practice"
+version = "0.1.0"
+description = ""
+authors = ["ferox <malov.egor.alexandrovich@gmail.com >"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyterhub = "4.0.2"
+jupyterlab = "4.0.6"
+jupyter-collaboration = "1.2.0"
+dockernel = "^1.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
