@@ -26,3 +26,4 @@ function build_and_install_kernel {
 build_and_install_kernel "pkernel37" "./dockernels/python37/Dockerfile" "pkernel37"
 build_and_install_kernel "pkernel39" "./dockernels/python39/Dockerfile" "pkernel39"
 build_and_install_kernel "pkernel311" "./dockernels/python311/Dockerfile" "pkernel311"
+build_and_install_kernel "r_lang" "./dockernels/r_lang/Dockerfile" "r_lang"
